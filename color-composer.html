@@ -30,7 +30,9 @@
 			.left-aligned-image {
 				display: block; /* Ensures it behaves as a block element */
 				margin-top: 1em; /* Adds space above the image */
-				margin-left: 0; /* Aligns the image to the left */
+				max-width: 100%; /* Ensures the image does not exceed the width of its container */
+				height: auto;    /* Maintains the aspect ratio of the image */
+				display: block;  /* Removes unwanted inline spacing around the image */
 			}
 		</style>
 	</head>
