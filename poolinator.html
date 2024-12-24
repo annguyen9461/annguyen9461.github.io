@@ -34,6 +34,84 @@
 				height: auto;    /* Maintains the aspect ratio of the image */
 				display: block;  /* Removes unwanted inline spacing around the image */
 			}
+			.box.alt .row.gtr-50.gtr-uniform {
+				display: flex; /* Flex layout for the row */
+				justify-content: space-between; /* Distribute space evenly between items */
+				align-items: center; /* Align items vertically */
+				gap: 16px; /* Add consistent spacing between columns */
+			}
+
+			.box.alt .row.gtr-50.gtr-uniform .col-4 {
+				flex: 1; /* Allow columns to take equal width */
+				display: flex; /* Ensure image and label are aligned */
+				flex-direction: column; /* Stack image and label vertically */
+				align-items: center; /* Center align content */
+				text-align: center; /* Center align labels */
+			}
+
+			.image.fit img {
+				height: 200px; /* Uniform image height */
+				object-fit: cover; /* Ensures content is cropped evenly */
+				margin: 0; /* Remove extra margins */
+			}
+
+			figure {
+				margin: 0; /* Remove default margins */
+			}
+
+			figcaption {
+				margin-top: 4px; /* Small gap between the GIF and the label */
+				font-size: 16px; /* Adjust label font size */
+				font-style: italic; /* Italicize the label */
+				color: #666; /* Optional: Styling for the label text */
+			}
+			
+			.floating-gif {
+				float: right; /* Aligns the GIF to the right of the text */
+				margin: 0 0 1em 1em; /* Space between the GIF and text */
+				max-width: 40%; /* Prevent the GIF from dominating the layout */
+				text-align: center; /* Center-align the label */
+			}
+
+			.floating-gif img {
+				max-width: 100%; /* Ensure the GIF fits within its container */
+				height: auto; /* Maintain aspect ratio */
+			}
+
+			.floating-gif figcaption {
+				margin-top: 4px; /* Space between the GIF and its label */
+				font-size: 16px; /* Smaller text for the label */
+				color: #666; /* Optional: Label styling */
+				text-align: center; /* Ensure the label is centered under the GIF */
+			}
+			
+			/* Responsive Design for Mobile View */
+			@media (max-width: 768px) {
+				.image.fit img, .floating-gif img {
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+				margin: 0;
+				}
+
+				figcaption {
+					font-size: 14px; /* Adjust label font size */
+				}
+
+				.floating-gif figcaption {
+					margin-top: 4px;
+					font-size: 14px;
+					color: #666;
+					text-align: center;
+				}
+
+				.col-4, .floating-gif {
+					width: 100%;
+					max-width: 100%;
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -194,13 +272,37 @@
 								</dl>
 								<h2>Computer Vision (Image Processing Node)
 								</h2>
-								<p>I was responsible for the computer vision portion of the project, which used the Intel RealSense camera to detect the pool ball coordinates. These coordinates were fed into the pool algorithm to plan trajectories for striking balls into pockets.
-
-									The image processing pipeline focused on two main colors: red (cue ball) and blue (other balls to be pocketed). To process each ball color, I first isolated the color using HSV-based color segmentation (Hue, Saturation, and Value), then filtered out contours with areas outside the expected ball size to reduce noise. Using the centroids of the contours, I determined the x and y coordinates of the balls. The depth information from the camera was then used to calculate the z coordinate.
-									
-									Pixel coordinates were converted into real-world coordinates (in meters) using the camera intrinsic values provided by the camera_info topic. These real-world coordinates were broadcasted as TF frames relative to the robot's base frame, enabling easy location lookup.
-									
-									</p>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-4">
+											<figure>
+												<span class="image fit">
+													<img src="images/red_ball_rviz_contour.gif" alt="Red Ball Contour" />
+												</span>
+												<figcaption>Red Ball Contour</figcaption>
+											</figure>
+										</div>
+										<div class="col-4">
+											<figure>
+												<span class="image fit">
+													<img src="images/red_ball_rviz_image.gif" alt="Red Ball Image" />
+												</span>
+												<figcaption>Real-time Image Streaming</figcaption>
+											</figure>
+										</div>
+										
+									</div>
+								</div>
+								<figure class="floating-gif">
+									<img src="images/red_ball_rviz_frames.gif" alt="TF frames for balls and pockets" />
+									<figcaption>TF Frames: Balls and Pockets</figcaption>
+								</figure>
+								<p>
+									I was responsible for the computer vision portion of the project, which used the Intel RealSense camera to detect the pool ball coordinates. These coordinates were fed into the pool algorithm to plan trajectories for striking balls into pockets. The image processing pipeline focused on two main colors: red (cue ball) and blue (other balls to be pocketed). 
+									<br>To process each ball color, I first isolated it using HSV-based color segmentation (Hue, Saturation, and Value) and then filtered out contours with areas outside the expected ball size to reduce noise. I then determined the x and y coordinates of the balls using the centroids (or centers of mass) of the contours.
+									<br>The depth information from the camera was then used to calculate the z coordinate. Pixel coordinates were converted into real-world coordinates (in meters) using the camera intrinsic values provided by the camera_info topic. 
+									<br>These real-world coordinates were broadcasted as TF frames relative to the robot's base frame, enabling easy location lookup.
+								</p>
 								<h2>Future Work</h2>
 								<p>The current computer vision approach relies on HSV values to locate the balls, which can be inconsistent under varying lighting conditions. For future work, we would consider training a YOLO model on images of pool balls to identify them more robustly. This could potentially allow us to use the full set of pool balls to play the game.
 
