@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>An Nguyen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<style>
+            .image.right {
+                float: right;
+                margin: 0 0 1em 1em; /* Adjusts space around the image */
+                max-width: 40%; /* Ensures the image doesn't occupy too much space */
+            }
+            
+			.block-diagram {
+				display: block;
+				margin: 1em auto; /* Centers the image horizontally */
+			}
+			.left-aligned-image {
+				display: block; /* Ensures it behaves as a block element */
+				margin-top: 1em; /* Adds space above the image */
+				max-width: 100%; /* Ensures the image does not exceed the width of its container */
+				height: auto;    /* Maintains the aspect ratio of the image */
+				display: block;  /* Removes unwanted inline spacing around the image */
+			}
+			.box.alt .row.gtr-50.gtr-uniform {
+				display: flex; /* Flex layout for the row */
+				justify-content: space-between; /* Distribute space evenly between items */
+				align-items: center; /* Align items vertically */
+				gap: 16px; /* Add consistent spacing between columns */
+			}
+
+			.box.alt .row.gtr-50.gtr-uniform .col-4 {
+				flex: 1; /* Allow columns to take equal width */
+				display: flex; /* Ensure image and label are aligned */
+				flex-direction: column; /* Stack image and label vertically */
+				align-items: center; /* Center align content */
+				text-align: center; /* Center align labels */
+			}
+
+			.image.fit img {
+				height: 200px; /* Uniform image height */
+				object-fit: cover; /* Ensures content is cropped evenly */
+				margin: 0; /* Remove extra margins */
+			}
+
+			figure {
+				margin: 0; /* Remove default margins */
+			}
+
+			figcaption {
+				margin-top: 4px; /* Small gap between the GIF and the label */
+				font-size: 16px; /* Adjust label font size */
+				font-style: italic; /* Italicize the label */
+				color: #666; /* Optional: Styling for the label text */
+			}
+			
+			.floating-gif {
+				float: right; /* Aligns the GIF to the right of the text */
+				margin: 0 0 1em 1em; /* Space between the GIF and text */
+				max-width: 40%; /* Prevent the GIF from dominating the layout */
+				text-align: center; /* Center-align the label */
+			}
+
+			.floating-gif img {
+				max-width: 100%; /* Ensure the GIF fits within its container */
+				height: auto; /* Maintain aspect ratio */
+			}
+
+			.floating-gif figcaption {
+				margin-top: 4px; /* Space between the GIF and its label */
+				font-size: 16px; /* Smaller text for the label */
+				color: #666; /* Optional: Label styling */
+				text-align: center; /* Ensure the label is centered under the GIF */
+			}
+			
+			/* Responsive Design for Mobile View */
+			@media (max-width: 768px) {
+				.image.fit img, .floating-gif img {
+				max-width: 100%;
+				height: auto;
+				object-fit: cover;
+				margin: 0;
+				}
+
+				figcaption {
+					font-size: 14px; /* Adjust label font size */
+				}
+
+				.floating-gif figcaption {
+					margin-top: 4px;
+					font-size: 14px;
+					color: #666;
+					text-align: center;
+				}
+
+				.col-4, .floating-gif {
+					width: 100%;
+					max-width: 100%;
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">An Nguyen</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">Projects</a></li>
+							<li class="active"><a href="pen-stealer.html">Pen Stealer</a></li>
+							<li><a href="/about.html">About Me</a></li>
+							<li><a href="/resume.html">Resume</a></li>
+						</ul>
+						<ul class="icons">
+							<li>
+								<a href="mailto:annguyen2025@u.northwestern.edu" class="icon solid fa-envelope">
+									<span class="label">Email</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/an-n-b2947b195/" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer">
+									<span class="label">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/annguyen9461" class="icon brands fa-github" target="_blank" rel="noopener noreferrer">
+									<span class="label">GitHub</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">September 20, 2024</span>
+									<h1>Pen Stealer</h1>
+								</header>
+								<div class="image main"><img src="images/pen.gif" alt="PincherX grabbing a pen" /></div>
+								<h2>Overview</h2>
+                                <p>As part of the MSR Hackathon challenge, I used the Intel RealSense Camera and OpenCV techniques to detect the position of a purple pen and programmed the PincherX 100 robot to autonomously grab it.
+                                </p>
+								<u>Github</u>: coming soon!
+								</p>
+								<h2>Components</h2>
+								<div class="equipment-list">
+                                    <li>Trossen PincherX 100</li>
+                                    <li>Intel RealSense Depth Camera D435i</li>
+								</div>
+								<br>
+								<h2>Vision pipeline
+								</h2>
+                                <span class="image right"><img src="images/pen-recognition.gif" alt="" /></span>
+                                <ul>
+                                    <li>Process the RGB image to locate the pen in 2D space.</li>
+                                    <li>Use trackbars to identify the Hue, Saturation, and Value (HSV) colorspace of the color purple.</li>
+                                    <li>Generate an HSV mask and use contour detection to isolate the pen in the image.</li>
+                                    <li>If multiple contours are detected, select the one with the largest area to eliminate noise.</li>
+                                    <li>Calculate the centroid of the selected contour as the 2D location of the pen in pixels.</li>
+                                    <li>Use the camera’s intrinsic parameters to convert the 2D pixel coordinates into real-world coordinates (in meters) using the depth map.</li>
+                                    <li>Output the pen’s location relative to the camera frame.</li>
+                                </ul>
+								<header>
+                                    <h2>Calibration</h2>
+                                    <p>calculating the pen’s position in the robot’s frame</p>
+                                </header>
+                                <ul>
+                                    <li>Use the <code>interbotix_xs_toolbox</code>, a Python API that integrates ROS2, to control the robot.</li>
+                                    <li>Write different modes to control the robot’s actions:
+                                        <ul>
+                                            <li>Opening/closing the grippers</li>
+                                            <li>Moving forward/backward</li>
+                                            <li>Moving up/down</li>
+                                            <li>Rotating the arm about its base</li>
+                                        </ul>
+                                    </li>
+                                    <li>Use these modes to evaluate the robot’s workspace limitations (e.g., singularities, joint limits, torque limits).</li>
+                                    <li>Find the transformation (translation and rotation) between the camera's coordinate frame and the robot's coordinate frame:
+                                        <ul>
+                                            <li>Collect data points where the end-effector is at known locations relative to the robot base and the camera.</li>
+                                            <li>Use these data points in the camera frame and the robot frame to compute the transformation.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Apply the computed transformation to the pen's position (camera frame) to convert it into the robot frame for motion commands.</li>
+                                </ul>
+                                
+								<h2>Robot control
+								</h2>
+								<ul>
+                                    <li>Set the robot to its ready position.</li>
+                                    <li>Open the grippers.</li>
+                                    <li>Detect the pen location using the vision pipeline.</li>
+                                    <li>Rotate the robot's waist until the end-effector is facing the pen.</li>
+                                    <li>Move forward until the pen is within the grippers’ grasp.</li>
+                                    <li>Close the grippers to grab the pen.</li>
+                                </ul>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; An Nguyen</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
