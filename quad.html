@@ -181,42 +181,40 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">December 14, 2024</span>
-									<h1>ReconQuad</h1>
+									<h1>Self-Reconfigurable Quadruped From Scratch</h1>
 								</header>
-								<div class="image main"><img src="images/quad.gif" alt="Franka playing pool" /></div>
+								<div class="image main"><img src="images/quad.gif" alt="quadruped" /></div>
 								<h2>Overview</h2>
-								<p>For my winter project, I designed and built a self-reconfigurable quadruped that can transform between walking and rolling mode. I also integrated ROS2 and YOLO for a computer vision task.</p>
-								<!-- <h2>Components</h2>
+								<p>For my winter project, I designed and built a self-reconfigurable quadruped that can switch between walking and rolling modes. I also integrated ROS2 and YOLO for a computer vision task.
+								</p>
+								<h2>Components</h2>
 								<div class="equipment-list">
-									<span class="image right">
-										<img src="images/pool-equipment-list.png" alt="poolinator equipment list" />
-									</span>
-										<li>Franka Emika Panda robot</li>
+										<li>Raspberry Pi 5</li>
 										<li>Intel RealSense Depth Camera D435i</li>
-										<li>Pool table, balls, and custom cue</li>
-								</div> -->
+										<li>DYNAMIXEL U2D2 Power Hub</li>
+										<li>DYNAMIXEL U2D2</li>
+										<li>DYNAMIXEL XL430-W250-T Motor (x 12)</li>
+										<li>3S Lipo Battery 5200mAh 50C 11.1V RC Batteries</li>
+								</div>
+								<br>
 								<!-- <br>
 								<br>
-								<br>
-								<br>
 								<br> -->
-                                <!-- <img src="images/quad_cad.png" alt="Block Diagram of Interactions for Poolinator" class="left-aligned-image">
-                                <img src="images/quad_top.png" alt="Block Diagram of Interactions for Poolinator" class="left-aligned-image">
-                                <img src="images/quad_walking.png" alt="Block Diagram of Interactions for Poolinator" class="left-aligned-image"> -->
-                                <div class="image-container">
-                                    <img src="images/quad_cad.png" alt="Block Diagram of Interactions for Poolinator">
-                                    <img src="images/quad_top.png" alt="Block Diagram of Interactions for Poolinator">
-                                    <img src="images/quad_walking.png" alt="Block Diagram of Interactions for Poolinator">
+								<h2>Design</h2>
+								<div class="image-container">
+                                    <img src="images/quad_cad.png" alt="CAD model">
+                                    <img src="images/quad_top.png" alt="top view">
+                                    <img src="images/quad_walking.png" alt="side view">
                                 </div>
-                                
+								<br>
 								<h2>Project Sequence
 								</h2>
 								<ul>
-									<li>The robot starts turning. At the same time, it is scanning for bowling pins. There is a 7s pause between turns.
+									<li>The robot begins turning while simultaneously scanning for bowling pins. There is a 7-second pause between turns.
 									</li>
-									<li>If the robot detects at least 2 pins for at least 3 seconds continuously, transform to rolling.
+									<li>If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
 									</li>
-									<li>Once it is in rolling mode, it uses the IMU data to get tilt angles and roll forward.
+									<li>Once in rolling mode, it reads IMU data and uses the acceleration of the Z and Y axes to determine tilt angles around the X-axis, then rolls forward.
 									</li>
 								</ul>
 								<h2>Nodes
@@ -227,19 +225,19 @@
 									<dt>Control (Action Server and Client Nodes)
 									</dt>
 									<dd>
-										<p>These nodes updates the robot states (TURNING, STOPPING, TRANSFORM TO ROLL, ROLLING, etc.) based on the number of bowling pins and publishe the corresponding robot configuration for the Motor Control Node to set the DXL motors.
+										<p>These nodes update the robot's state (TURNING, STOPPING, TRANSFORM TO ROLL, ROLLING, etc.) based on the number of detected bowling pins and publish the corresponding robot configuration for the Motor Control Node to set the DXL motors.
 										</p>
 									</dd>
-									<dt>Computer Vision (Yolo Node)
+									<dt>Computer Vision (YOLO Node)
 									</dt>
 									<dd>
-										<p>This node processes data from the camera and count the number of bowling pins to be published to a topic.
+										<p>This node processes data from the camera and counts the number of bowling pins, publishing the result to a topic.
 										</p>
 									</dd>
 									<dt>Dynamixel Motor Control (Quad Motor Control Node)
 									</dt>
 									<dd>
-										<p>This node controls the motors depending on the robot state and process IMU data to get tilt angles during ROLLING mode.
+										<p>This node controls the motors based on the robot's state and processes IMU data to determine tilt angles during ROLLING mode.
 										</p>
 									</dd>
 								</dl>
@@ -248,6 +246,8 @@
 									<p>Block Diagram of the Interactions Between Subsystems
 									</p>
 								</header>
+								<h2>Demo
+								</h2>
 								<img src="images/quad_rolling_inital.gif" class="left-aligned-image">
                                 <header>
 									<p>Rolling Initial
