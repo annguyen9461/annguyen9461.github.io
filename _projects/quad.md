@@ -147,7 +147,7 @@ content_layout:
   
   - section_layout: text
     content: |
-      **References**
+      **Reference**
       https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot
 
   
