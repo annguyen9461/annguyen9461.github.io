@@ -96,9 +96,23 @@ content_layout:
       $$
 
 
-      Depending on the orientation, the system issues a movement command like to roll forward with YELLOW side propulsion or roll forward with BLUE side propulsion).
+      Depending on the orientation, the system issues a movement command like to roll forward with YELLOW side propulsion or roll forward with BLUE side propulsion.
 
       The system runs in real time and adjusts its propulsion mode dynamically based on IMU feedback.
+
+  - section_layout: text
+    content: |
+      ## COMPUTER VISION
+
+      I used YOLOv11 from Ultralytics, trained with a [bowling pin dataset](https://universe.roboflow.com/lsc-kik8c/bowling-pin-detection) to improve robustness. Since the model does not perform as well on blue bowling pins, I added a second red bowling pin to help the robot correctly transform when it is facing the center between the pins.
+
+  - section_layout: 1col
+    images:
+      - caption:
+        description: 'quad cv demo'
+        url: '/projects/quad/quad-cv-demo.gif'
+        width:
+        height:
 
   - section_layout: text
     content: |
@@ -118,7 +132,7 @@ content_layout:
   - section_layout: 1col
     images:
       - caption:
-        description: 'Newspaper magazine'
+        description: 'quad block diagram'
         url: '/projects/quad/quad-diagram.png'
         width:
         height:
@@ -141,10 +155,12 @@ content_layout:
       <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
+
   - section_layout: text
     content: |
-      **Reference**
-      https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot
+      **Reference:**
+      
+      [Scorpio: A biomimetic reconfigurable rolling-crawling robot](https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot)
 
   
 ---
