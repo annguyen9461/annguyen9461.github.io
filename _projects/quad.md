@@ -62,7 +62,7 @@ content_layout:
     content: |
       ## PROCESSING IMU DATA FOR ROLLING
 
-      To determine when and how to propel the quadruped robot in rolling mode, we process accelerometer and gyroscope data from the ISM330DHCX sensor via I²C on a Raspberry Pi 5.
+      To determine when and how to propel the quadruped robot in rolling mode, I process accelerometer and gyroscope data from the ISM330DHCX sensor via I²C on a Raspberry Pi 5.
 
       The key goal is to compute the **tilt angle** of the robot using acceleration in the Y and Z axes:
 
