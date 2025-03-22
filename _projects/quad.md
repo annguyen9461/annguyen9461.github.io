@@ -108,7 +108,7 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption:
+      - caption: Using YOLO to Detect and Count Bowling Pins
         description: 'quad cv demo'
         url: '/projects/quad/quad-cv-demo.gif'
         width:
@@ -131,7 +131,7 @@ content_layout:
 
   - section_layout: 1col
     images:
-      - caption:
+      - caption: Block Diagram of the Interactions Between Subsystems
         description: 'quad block diagram'
         url: '/projects/quad/quad-diagram.png'
         width:
