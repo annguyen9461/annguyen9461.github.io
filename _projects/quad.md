@@ -14,7 +14,7 @@ thumbnail: "/projects/quad/quad.gif"
 intro: |
   **OVERVIEW**
 
-  For my winter project, I designed and built a self-reconfigurable quadruped 
+  For my winter project, I built a self-reconfigurable quadruped 
   that can switch between walking and rolling modes. 
   I also integrated ROS2 and YOLO for a computer vision task.
 
@@ -62,7 +62,7 @@ content_layout:
     content: |
       ## PROCESSING IMU DATA FOR ROLLING
 
-      To determine when and how to propel the quadruped robot in rolling mode, I process accelerometer and gyroscope data from the ISM330DHCX sensor via I²C on a Raspberry Pi 5.
+      To determine how to propel the quadruped robot in rolling mode, I process accelerometer and gyroscope data from the ISM330DHCX sensor via I²C on a Raspberry Pi 5.
 
       The key goal is to compute the **tilt angle** of the robot using acceleration in the Y and Z axes:
 
