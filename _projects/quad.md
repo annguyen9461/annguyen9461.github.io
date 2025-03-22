@@ -83,20 +83,20 @@ content_layout:
 
       After averaging a short window of tilt measurements, the robot checks if the orientation falls within certain thresholds:
 
-      **Blue side under** if:
+      **BLUE side under** if:
 
       $$
       \theta_{\text{deg}} \in [-179^\circ, -162^\circ] \cup [167^\circ, 179^\circ]
       $$
 
-      **Yellow side under** if:
+      **YELLOW side under** if:
 
       $$
       \theta_{\text{deg}} \in [0^\circ, 15^\circ] \cup [-23^\circ, 0^\circ]
       $$
 
 
-      Depending on the orientation, the system issues a movement command like `rfy` (roll forward with yellow side propulsion) or `rfb` (roll forward with blue side propulsion).
+      Depending on the orientation, the system issues a movement command like to roll forward with YELLOW side propulsion or roll forward with BLUE side propulsion).
 
       The system runs in real time and adjusts its propulsion mode dynamically based on IMU feedback.
 
@@ -136,15 +136,11 @@ content_layout:
   - section_layout: text
     content: |
       ## DEMO
-
-  - section_layout: 1col
-    images:
-      - caption: Bowling Demo
-        description: 'Newspaper magazine'
-        url: '/projects/quad/quad_bowling.gif'
-        width:
-        height:
-  
+      <br>
+      <video controls width="1200">
+      <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
   - section_layout: text
     content: |
       **Reference**
