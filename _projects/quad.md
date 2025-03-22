@@ -144,6 +144,11 @@ content_layout:
         url: '/projects/quad/quad_bowling.gif'
         width:
         height:
+  
+  - section_layout: text
+    content: |
+      **References**
+      https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot
 
   
 ---
