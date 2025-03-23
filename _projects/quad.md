@@ -116,6 +116,14 @@ content_layout:
 
   - section_layout: text
     content: |
+      **AUTONOMOUS BOWLING SEQUENCE**
+
+      - The robot begins turning while simultaneously scanning for bowling pins. 
+      - There is a 7-second pause between turns.
+      - If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
+      - Once in rolling mode, it reads IMU data to determine tilt angles around the X-axis before rolling forward.
+
+      <br>
       ## NODES
 
       The bowling task is divided into several subsystems:
@@ -141,14 +149,7 @@ content_layout:
     content: |
       ## DEMO
       <br>
-      **AUTONOMOUS BOWLING SEQUENCE**
-
-      - The robot begins turning while simultaneously scanning for bowling pins. 
-      - There is a 7-second pause between turns.
-      - If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
-      - Once in rolling mode, it reads IMU data to determine tilt angles around the X-axis before rolling forward.
-
-      <br>
+      
       <video controls width="1200">
       <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
       Your browser does not support the video tag.
