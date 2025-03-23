@@ -18,7 +18,7 @@ intro: |
   that can switch between walking and rolling modes. 
   I also integrated ROS2 and YOLO for a computer vision task.
 
-  **COMPONENTS**
+  **HARDWARE**
   - Raspberry Pi 5
   - Intel RealSense Depth Camera D435i
   - DYNAMIXEL U2D2 Power Hub
@@ -139,17 +139,15 @@ content_layout:
 
   - section_layout: text
     content: |
+      ## DEMO
+      <br>
       **AUTONOMOUS BOWLING SEQUENCE**
 
       - The robot begins turning while simultaneously scanning for bowling pins. 
       - There is a 7-second pause between turns.
       - If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
-      - Once in rolling mode, it reads IMU data and uses the acceleration of the Z and Y axes to determine tilt angles around the X-axis, then rolls forward.
-  
+      - Once in rolling mode, it reads IMU data to determine tilt angles around the X-axis before rolling forward.
 
-  - section_layout: text
-    content: |
-      ## DEMO
       <br>
       <video controls width="1200">
       <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
