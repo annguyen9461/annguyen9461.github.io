@@ -31,14 +31,8 @@ sitemap: true
 
 # Social networks
 social-username:
-  twitter: "@mattgreydesign"
-  linkedin: "himatt"
-  github: "mattgreydesign"
-  medium: "@mattgreydesign"
-  pinterest: "mattgreydesign"
-  instagram: "mattgreydesign"
-  flickr: "mattgreydesign"
-  spotify: "mattgreydesign"
+  linkedin: "an-n-b2947b195"
+  github: "annguyen9461"
 
 # Content
 image_serve_path: "/images" # <img src="{{ site.image_serve_path }}/projects/img.jpg">
