@@ -148,6 +148,7 @@ content_layout:
   - section_layout: text
     content: |
       ## DEMO
+      
       <video controls style="width: 100%; height: auto;">
       <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -155,7 +156,7 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## REFERENCE
+      **Reference:**
       
       [Scorpio: A biomimetic reconfigurable rolling-crawling robot](https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot)
 
