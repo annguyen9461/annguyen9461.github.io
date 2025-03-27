@@ -21,6 +21,15 @@ intro: |
 content_layout:
   - section_layout: text
     content: |
+      ## DEMO
+      
+      <video controls style="width: 100%; height: auto;">
+      <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+
+  - section_layout: text
+    content: |
       ## HARDWARE
       - Raspberry Pi 5
       - Intel RealSense Depth Camera D435i
@@ -153,21 +162,5 @@ content_layout:
         url: '/projects/quad/quad-diagram.png'
         width:
         height:
-
-  - section_layout: text
-    content: |
-      ## DEMO
-      
-      <video controls style="width: 100%; height: auto;">
-      <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-
-  - section_layout: text
-    content: |
-      **Reference:**
-      
-      [Scorpio: A biomimetic reconfigurable rolling-crawling robot](https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot)
-
   
 ---
