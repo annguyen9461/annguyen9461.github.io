@@ -12,23 +12,33 @@ time_period: 2025
 thumbnail: "/projects/quad/quad.gif"
 
 intro: |
-  **OVERVIEW**
+  ## OVERVIEW
 
   For my winter project, I built a self-reconfigurable quadruped 
   that can switch between walking and rolling modes. 
   I also integrated ROS2 and YOLO for a computer vision task.
 
-  **HARDWARE**
-  - Raspberry Pi 5
-  - Intel RealSense Depth Camera D435i
-  - DYNAMIXEL U2D2 Power Hub
-  - DYNAMIXEL U2D2
-  - DYNAMIXEL XC430-T240BB-T Motor (x 12)
-  - Adafruit ISM330DHCX - 6 DoF IMU - Accelerometer and Gyroscope
-  - 3S Lipo Battery 5200mAh 50C 11.1V RC Batteries
-  
-
 content_layout:
+  - section_layout: text
+    content: |
+      ## HARDWARE
+      - Raspberry Pi 5
+      - Intel RealSense Depth Camera D435i
+      - DYNAMIXEL U2D2 Power Hub
+      - DYNAMIXEL U2D2
+      - DYNAMIXEL XC430-T240BB-T Motor (x 12)
+      - Adafruit ISM330DHCX - 6 DoF IMU - Accelerometer and Gyroscope
+      - 3S Lipo Battery 5200mAh 50C 11.1V RC Batteries
+      
+
+  - section_layout: text
+    content: |
+      ## DESIGN
+
+      The research paper [Scorpio: A biomimetic reconfigurable rolling-crawling robot](https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot) inspired the design of my robot, which I fully modeled in OnShape.
+      
+      I chose DYNAMIXEL motors for their high torque output and well-documented ROS2 integration. For the microcontroller, I used the Raspberry Pi 5, which supports Ubuntu 24.04 and runs ROS2 efficiently.
+
   - section_layout: 2col
     images:
       - caption: CAD Design
@@ -106,6 +116,13 @@ content_layout:
 
       I used YOLOv11 from Ultralytics, trained with a [bowling pin dataset](https://universe.roboflow.com/lsc-kik8c/bowling-pin-detection) to improve robustness. Since the model does not perform as well on blue bowling pins, I added a second red bowling pin to help the robot correctly transform when it is facing the center between the pins.
 
+      **AUTONOMOUS BOWLING SEQUENCE**
+
+      - The robot begins turning while simultaneously scanning for bowling pins. 
+      - There is a 7-second pause between turns.
+      - If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
+      - Once in rolling mode, it reads IMU data to determine tilt angles around the X-axis before rolling forward.
+
   - section_layout: 1col
     images:
       - caption: Using YOLO to Detect and Count Bowling Pins
@@ -116,14 +133,6 @@ content_layout:
 
   - section_layout: text
     content: |
-      **AUTONOMOUS BOWLING SEQUENCE**
-
-      - The robot begins turning while simultaneously scanning for bowling pins. 
-      - There is a 7-second pause between turns.
-      - If the robot detects at least two pins continuously for 3 seconds, it transitions to rolling mode.
-      - Once in rolling mode, it reads IMU data to determine tilt angles around the X-axis before rolling forward.
-
-      <br>
       ## NODES
 
       The bowling task is divided into several subsystems:
