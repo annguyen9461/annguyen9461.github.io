@@ -140,7 +140,7 @@ content_layout:
         \text{TICKS} = \left(\frac{\theta}{360^\circ}\right) \cdot 4096
         $$
 
-      Each gait operates in a real-time control loop that dynamically updates motor positions and synchronizes leg phases. All movements are verified using live position feedback from `GroupSyncRead`.
+      Each gait operates in a real-time control loop that dynamically updates motor positions.
 
   - section_layout: text
     content: |
