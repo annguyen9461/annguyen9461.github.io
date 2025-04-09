@@ -24,7 +24,7 @@ content_layout:
       ## DEMO
       
       <video controls style="width: 100%; height: auto;">
-      <source src="/videos/demo-with-rviz.mp4" type="video/mp4">
+      <source src="/videos/quad-demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
 
