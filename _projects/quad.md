@@ -64,7 +64,7 @@ content_layout:
   
   - section_layout: text
     content: |
-      ## WALKING GAIT - CRAWLING
+      ## CRAWLING GAIT
       **Pattern:** Move one leg at a time (wave pattern)  
       **Stability:** Always 3 legs on ground  
       **Speed:** Slow but very stable      
@@ -80,8 +80,8 @@ content_layout:
   
   - section_layout: 1col
     images:
-      - caption: Walking Gait
-        description: 'walking gait'
+      - caption: Crawling Gait
+        description: 'crawling gait'
         url: '/projects/quad/walking-gait.png'
         width:
         height:
