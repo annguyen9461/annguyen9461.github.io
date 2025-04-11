@@ -1,7 +1,7 @@
 ---
 date: 2024-12-14
 published: true
-title: "Poolinator"
+title: "The Poolinator"
 description: "Python, ROS2, MoveIt, OpenCV"
 categories: branding, digital
 technologies: Python, ROS2, MoveIt, OpenCV
