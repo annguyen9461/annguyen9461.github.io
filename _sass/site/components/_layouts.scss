@@ -1,8 +1,30 @@
 .layout { padding-bottom: var(--gutter-row); }
 
+// For all layout containers, add a class to match text width
+.layout-1col,
+.layout-2col,
+.layout-1col-narrow,
+.layout-3col,
+.layout-4col {
+  @include grid-media(desktop) {
+    // Add a wrapper to constrain width and center
+    max-width: calc(100% * 7/12); // Width of columns 2-8
+    margin-left: calc(100% * 1/12); // Offset to start at column 2
+  }
+}
+
+// Modify layout-1col to center images with equal margins
 .layout-1col,
 .additional-content-wrapper {
   @extend .grid-container;
+
+  // Create a centered container that matches the text width
+  @include grid-media(desktop) {
+    width: calc(100% * 7/12); // Match width of text (columns 2-8 = 7 columns)
+    margin-left: auto; // Auto margin left
+    margin-right: auto; // Auto margin right
+    padding-left: 0; // Remove the left padding
+  }
 
   .image-wrapper,
   .additional-content {
@@ -13,14 +35,22 @@
     }
 
     @include grid-media(desktop) {
-      @include grid-column(12);
+      @include grid-column(12); // Full width of the adjusted container
     }
   }
 }
 
+// Fix the 1col-narrow layout as well
 .layout-1col-narrow {
   @extend .grid-container;
 
+  @include grid-media(desktop) {
+    width: calc(100% * 7/12); // Match width of text (columns 2-8 = 7 columns)
+    margin-left: auto; // Auto margin left
+    margin-right: auto; // Auto margin right
+    padding-left: 0; // Remove the left padding
+  }
+
   .image-wrapper {
     @include grid-column(6);
 
@@ -29,13 +59,22 @@
     }
 
     @include grid-media(desktop) {
-      @include grid-column-from-to(2,11);
+      @include grid-column(12); // Full width of the adjusted container
     }
   }
 }
 
+// Apply same fix to .layout-2col
 .layout-2col {
   @extend .grid-container;
+
+  // Create a centered container that matches the text width
+  @include grid-media(desktop) {
+    width: calc(100% * 7/12); // Match width of text (columns 2-8 = 7 columns)
+    margin-left: auto; // Auto margin left
+    margin-right: auto; // Auto margin right
+    padding-left: 0; // Remove the left padding
+  }
 
   .image-wrapper {
     @include grid-column(6);
@@ -45,7 +84,7 @@
     }
 
     @include grid-media(desktop) {
-      @include grid-column(6);
+      @include grid-column(6); // Keep as 6 columns (half of the adjusted container)
     }
   }
 }
@@ -183,5 +222,15 @@
     @include grid-media(desktop) {
       @include grid-column(5);
     }
+  }
+}
+
+.layout-text {  
+  @include grid-media(desktop) {
+    width: calc(100% * 7/8);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

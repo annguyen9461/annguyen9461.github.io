@@ -22,7 +22,7 @@ content_layout:
   
   - section_layout: text
     content: |
-      ## Project Sequence
+      ## PROJECT SEQUENCE
       <ul>
         <li>The game begins with the robot arm moving to the side to avoid obscuring the table.
         </li>
@@ -50,7 +50,7 @@ content_layout:
 
   - section_layout: text
     content: |
-      ## Nodes and Python Modules
+      ## NODES AND PYTHON MODULES
 
       The project is divided into several subsystems:
 
