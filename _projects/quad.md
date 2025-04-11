@@ -12,9 +12,7 @@ time_period: 2025
 thumbnail: "/projects/quad/quad.gif"
 
 intro: |
-  The goal of this project was to build a self-reconfigurable quadruped 
-  that can switch between walking and rolling modes. 
-  I also integrated ROS2 and YOLO for a computer vision task.
+  The goal of this project was to build a self-reconfigurable quadruped capable of switching between walking and rolling modes. I also integrated ROS2 and YOLO to support a computer vision task.
 
 content_layout:
   - section_layout: text  
