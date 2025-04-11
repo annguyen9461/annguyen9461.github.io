@@ -68,27 +68,29 @@ content_layout:
   
   - section_layout: text
     content: |
-      ## WALKING GAITS
-
-      ### TROTTING
-
-      **Pattern:** Diagonal pairs move together  
-      **Stability:** 2 legs on ground at all times  
-      **Speed:** Moderate speed with good efficiency
-
-      **Footfall sequence:**
-      - Phase 1: Front-left (Leg 1) + Rear-right (Leg 4)
-      - Phase 2: Front-right (Leg 2) + Rear-left (Leg 3)
-
-      ### CRAWLING
-
+      ## WALKING GAIT - CRAWLING
       **Pattern:** Move one leg at a time (wave pattern)  
       **Stability:** Always 3 legs on ground  
       **Speed:** Slow but very stable
 
       **Footfall Sequence:**  
       Leg 4 → Leg 1 → Leg 3 → Leg 2
-      Each gait operates in a real-time control loop that dynamically updates motor positions.
+      
+      Each leg executes:
+      1. **Lift**: +22° on roll joint
+      2. **Swing forward**: +10–25° yaw offset
+      3. **Lower**: returns to home pose
+      4. **Body pause**: robot rests on all four legs to ensure stability
+
+      The gait operates in a real-time control loop that dynamically updates motor positions.
+  
+  - section_layout: 1col
+    images:
+      - caption: Walking Gait
+        description: 'walking gait'
+        url: '/projects/quad/walking-gait.png'
+        width:
+        height:
 
   - section_layout: text
     content: |
