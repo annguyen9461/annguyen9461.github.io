@@ -71,10 +71,8 @@ content_layout:
       ## WALKING GAIT - CRAWLING
       **Pattern:** Move one leg at a time (wave pattern)  
       **Stability:** Always 3 legs on ground  
-      **Speed:** Slow but very stable
-
-      **Footfall Sequence:**  
-      Leg 4 → Leg 1 → Leg 3 → Leg 2
+      **Speed:** Slow but very stable      
+      **Footfall Sequence:** Leg 4 → Leg 1 → Leg 3 → Leg 2
       
       Each leg executes:
       1. **Lift**: +22° on roll joint
@@ -107,13 +105,6 @@ content_layout:
       where:
       - \\( a_y \\) : linear acceleration along the Y-axis  
       - \\( a_z \\) : linear acceleration along the Z-axis
-
-
-      This angle is converted from radians to degrees to determine the robot’s current orientation and decide which side (blue or yellow) is on the ground:
-
-      $$
-      \theta_{\text{deg}} = \theta \cdot \left( \frac{180}{\pi} \right)
-      $$
 
       After averaging a short window of tilt measurements, the robot checks if the orientation falls within certain thresholds:
 
