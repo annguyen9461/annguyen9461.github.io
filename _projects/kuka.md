@@ -45,7 +45,7 @@ content_layout:
 
   - section_layout: text  
     content: |
-        ## TRAJECTORY GENERATOR: 8 STAGES
+        ## TRAJECTORY GENERATOR
 
         The `TrajectoryGenerator` creates eight concatenated trajectory segments in SE(3), each starting and ending at rest:
         1. Move to standoff above initial block.
