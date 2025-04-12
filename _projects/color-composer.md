@@ -19,7 +19,7 @@ website:
 intro: |
   We built a differential drive robot that could be wirelessly controlled via a joystick and two Micro:Bits powered by the nRF52833 microcontrollers. As the robot drives over colors on the ground, it plays music notes that are associated with different colors.
 
-  Team Members: Talia Ben-Naim, Natalie Hill
+  **Team Members:** Talia Ben-Naim, Natalie Hill
 content_layout:
   - section_layout: text  
     content: |
