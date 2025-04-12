@@ -1,5 +1,5 @@
 ---
-date: 2024-12-11
+date: 2024-12-12
 published: true
 title: "KUKA youBot Mobile Manipulation"
 description: "Python, Trajectory Planning, Manipulation, Feedforward Control"
