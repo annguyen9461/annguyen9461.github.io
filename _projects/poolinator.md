@@ -95,4 +95,62 @@ content_layout:
         url: '/projects/poolinator/poolinator-diagram.png'
         width:
         height:
+
+  - section_layout: text
+    content: |
+      ## CUSTOM ROS2 MOVEIT API
+
+      Prior to this project, our team developed a custom MoveIt API to help the Franka arm plan trajectories and control its movements. Key features include:
+
+      **Pose-based Planning**  
+      Plan trajectories to reach specific end-effector poses, such as the strike position or standby position.
+
+      **Joint State Planning**  
+      Plan trajectories to move the robot to predefined joint configurations.
+
+      **Cartesian Path Planning**  
+      Plan linear motions for tasks like moving the end-effector along the x-axis during a cue strike.
+
+      **Inverse Kinematics**  
+      Convert desired end-effector poses into joint configurations for precise execution.
+
+      **Planning Scene Setup**  
+      Create a planning scene with obstacles like the table and camera to ensure collision-free paths.
+
+  - section_layout: text
+    content: |
+      ## COMPUTER VISION (IMAGE PROCESSING NODE)
+
+  - section_layout: 2col
+    images:
+    - caption: Red Ball Contour
+      description: 'Red Ball Contour'
+      url: '/projects/poolinator/red_ball_rviz_contour.gif'
+      width:
+      height:
+    
+    - caption: Real-time Image Streaming
+      description: 'Real-time Image Streaming'
+      url: '/projects/poolinator/red_ball_rviz_image.gif'
+      width:
+      height:
+
+  - section_layout: text
+    content: |
+      I developed the image processing node using the Intel RealSense camera to detect the 3D positions of pool balls. These positions were used to guide the robot in planning strike trajectories.
+
+      The image pipeline focused on detecting red (cue ball) and blue (target balls) using **HSV-based color segmentation**. I filtered contours based on size to remove noise and computed the center of mass to extract x and y positions.
+
+      For depth (z), I used the depth stream from the RealSense camera and converted pixel coordinates into real-world metric positions using intrinsic parameters from the `camera_info` topic.
+
+      I then broadcasted each ball’s position as a **TF frame** relative to the robot's base frame, enabling the control nodes to access their live positions.
+
+  - section_layout: text
+    content: |
+      ## FUTURE WORK
+
+      The current HSV-based vision pipeline is sensitive to lighting and may fail in inconsistent environments. A natural improvement would be to train a **YOLO model** to detect pool balls more reliably across lighting conditions and angles.
+
+      Another future direction is to replace the custom strike tool with the standard **pool cue stick** provided with the table. This would bring the robot’s performance closer to a human-like interaction with the game.
+
 ---
