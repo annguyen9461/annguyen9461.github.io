@@ -10,71 +10,76 @@ ownership: Personal
 client:
 time_period: 2024
 thumbnail: "/projects/pen/pen.gif"
-ready: false
+ready: true
 
 intro: |
-  The Saatchi gallery is revered for its ability to introduce almost unknown
-  artists into the public eye; the careers of Damien Hirst and Tracy Emin were
-  launched from the exposure Saatchi gave them and the gallery boasts the
-  largest private collection of artwork in the world.
-
-  Over the years the gallery has retained it’s success but has never gained a
-  larger public audience, partly down to not having a consistent brand attached
-  to it; a disjointed mix of different logos and related imagery from the
-  various outlets (in-gallery, online and magazine) has diluted the potential of
-  the Saatchi name.
+  As part of the MSR Hackathon challenge, I used the Intel RealSense Camera and OpenCV techniques to detect the position of a purple pen and programmed the PincherX 100 robot to autonomously grab it.
 
 content_layout:
-  - section_layout: 5col-7col
-    images:
-      - caption:
-        description: 'Proposed logo'
-        url: '/projects/saatchi-gallery/saatchi-logo.png'
-        border: light
-        width:
-        height:
-      - caption:
-        description: 'Magazine'
-        url: '/projects/saatchi-gallery/saatchi-magazine.jpg'
-        positioning: nudge-down-5
-        width:
-        height:
-
   - section_layout: text
     content: |
-      I carried the concept of the institution's cutting-edge reputation into
-      reality. The Saatchi gallery is known for it’s sometimes controversial art
-      and confidence, which I hinted at in the logo by introducing sharp 45°
-      angles which give a suggestion of brash menace.
-
-  - section_layout: 2col
-    images:
-      - caption:
-        description: 'Magazine article'
-        url: '/projects/saatchi-gallery/saatchi-magazine-article.jpg'
-        positioning: nudge-down-5
-        width:
-        height:
-      - caption:
-        description: 'Newspaper magazine'
-        url: '/projects/saatchi-gallery/saatchi-magazine-article-inner.jpg'
-        width:
-        height:
-
-  - section_layout: text
-    content: |
-      I wanted to re-imagine the brand to project a more modern image which
-      could comfortably extend across digital and print platforms, from the
-      responsive website to promotional items such as posters and banners, as
-      well as magazines that I chose to be in the format of newspapers to
-      reflect the cutting edge, newsworthy art being displayed within the
-      gallery.
+      ## DEMO
 
   - section_layout: 1col
     images:
-      - caption:
-        description: 'Newspaper magazine'
-        url: '/projects/saatchi-gallery/saatchi-website.jpg'
+      - caption: 
+        description: 'quad block diagram'
+        url: '/projects/pen/pen.gif'
         width:
         height:
+
+  - section_layout: text
+    content: |
+      ## COMPONENTS
+
+      - Trossen PincherX 100
+      - Intel RealSense Depth Camera D435i
+
+  - section_layout: text
+    content: |
+      ## VISION PIPELINE
+      - Process the RGB image to locate the pen in 2D space.
+      - Use trackbars to identify the Hue, Saturation, and Value (HSV) colorspace of the color purple.
+      - Generate an HSV mask and use contour detection to isolate the pen in the image.
+      - If multiple contours are detected, select the one with the largest area to eliminate noise.
+      - Calculate the centroid of the selected contour as the 2D location of the pen in pixels.
+      - Use the camera’s intrinsic parameters to convert the 2D pixel coordinates into real-world coordinates (in meters) using the depth map.
+      - Output the pen’s location relative to the camera frame.
+
+  - section_layout: 1col
+    images:
+      - caption: 
+        description: 'quad block diagram'
+        url: '/projects/pen/pen-recognition.gif'
+        width:
+        height:
+
+  - section_layout: text
+    content: |
+      ## CALIBRATION
+
+      **Calculating the pen’s position in the robot’s frame:**
+
+      - Use the `interbotix_xs_toolbox`, a Python API that integrates with ROS2, to control the robot.
+      - Write different modes to control the robot’s actions:
+        - Opening/closing the grippers
+        - Moving forward/backward
+        - Moving up/down
+        - Rotating the arm about its base
+      - Use these modes to evaluate the robot’s workspace limitations (e.g., singularities, joint limits, torque limits).
+      - Find the transformation (translation and rotation) between the camera's coordinate frame and the robot's coordinate frame:
+        - Collect data points where the end-effector is at known locations relative to both the robot base and the camera.
+        - Use these data points in the camera frame and the robot frame to compute the transformation.
+      - Apply the computed transformation to the pen's position (camera frame) to convert it into the robot frame for motion commands.
+
+  - section_layout: text
+    content: |
+      ## ROBOT CONTROL
+
+      - Set the robot to its ready position.
+      - Open the grippers.
+      - Detect the pen location using the vision pipeline.
+      - Rotate the robot's waist until the end-effector is facing the pen.
+      - Move forward until the pen is within the grippers’ grasp.
+      - Close the grippers to grab the pen.
 ---
