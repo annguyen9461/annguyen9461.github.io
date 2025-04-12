@@ -125,7 +125,7 @@ content_layout:
     content: |
       ## COMPUTER VISION AND MACHINE LEARNING
 
-      I used YOLOv11 from Ultralytics, trained with a [bowling pin dataset](https://universe.roboflow.com/lsc-kik8c/bowling-pin-detection) to improve robustness. Since the model does not perform as well on blue bowling pins, I added a second red bowling pin to help the robot correctly transform when it is facing the center between the pins.
+      I used YOLOv11 from Ultralytics, trained with a [bowling pin dataset](https://universe.roboflow.com/lsc-kik8c/bowling-pin-detection) to update the number of bowling pins so the robot could transform when it is facing the center of the pins.
 
       **AUTONOMOUS BOWLING SEQUENCE**
 
