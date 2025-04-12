@@ -18,7 +18,7 @@ website:
 intro: |
   The Franka Emika Panda 7-DoF arm plays a game of pool by identifying balls and hitting them into pockets.
 
-  <u>Team Members:</u> Caroline Terryn, Catherine Maglione, Joseph Blom, Logan Boswell
+  **Team Members:** Caroline Terryn, Catherine Maglione, Joseph Blom, Logan Boswell
 
 
 content_layout:
