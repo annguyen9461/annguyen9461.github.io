@@ -13,7 +13,7 @@ thumbnail: "/projects/quad/quad.gif"
 
 website:
   button_text: Github
-  url: https://github.com/annguyen9461/reconfigurable-quadruped
+  url: https://github.com/annguyen9461/self-reconfigurable-quadruped
 
 intro: |
   The goal of this project was to build a self-reconfigurable quadruped capable of switching between walking and rolling modes. I also integrated ROS2 and YOLO to support a computer vision task.
