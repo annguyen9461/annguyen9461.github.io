@@ -22,7 +22,15 @@ intro: |
 
 
 content_layout:
-  
+  - section_layout: text  
+    content: |
+      ## DEMO
+      
+      <video controls style="width: 100%; height: auto;">
+      <source src="/videos/pool-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+
   - section_layout: text
     content: |
       ## PROJECT SEQUENCE
