@@ -63,8 +63,8 @@ compress_html: # http://jch.penibelst.de/
 navigation:
   - title: Projects
     url: /
-  - title: About
-    url: /about
+  # - title: About
+  #   url: /about
   # - title: Contact
   #   url: /contact
   # - title: Resume
