@@ -153,12 +153,4 @@ content_layout:
 
       I then broadcasted each ball’s position as a **TF frame** relative to the robot's base frame, enabling the control nodes to access their live positions.
 
-  - section_layout: text
-    content: |
-      ## FUTURE WORK
-
-      The current HSV-based vision pipeline is sensitive to lighting and may fail in inconsistent environments. A natural improvement would be to train a **YOLO model** to detect pool balls more reliably across lighting conditions and angles.
-
-      Another future direction is to replace the custom strike tool with the standard **pool cue stick** provided with the table. This would bring the robot’s performance closer to a human-like interaction with the game.
-
 ---
