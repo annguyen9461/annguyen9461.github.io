@@ -34,11 +34,11 @@ content_layout:
     content: |
       ## AI AGENTS
 
-      **Markov Agent**
+      **Markov Model**
       - Tracks transition probabilities between player moves.
       - Predicts the next move based on the last move's transition matrix.
 
-      **Decision Tree Agent**
+      **Decision Tree**
       - Uses features like previous move frequency and patterns.
       - Trains a decision tree to predict the player’s next move and respond optimally.
 
