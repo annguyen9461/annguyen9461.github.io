@@ -13,7 +13,7 @@ thumbnail: "/projects/poolinator/pool2.gif"
 
 website:
   button_text: Github
-  url: https://github.com/ME495-EmbeddedSystems/finalproject-jrblom2
+  url: https://github.com/annguyen9461/poolinator
 
 intro: |
   The Franka Emika Panda 7-DoF arm plays a game of pool by identifying balls and hitting them into pockets.
