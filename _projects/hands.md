@@ -9,7 +9,7 @@ media: Book
 ownership: Personal
 client:
 time_period: 2025
-thumbnail: "/projects/hand/hand.gif"
+thumbnail: "/projects/hand/hands.gif"
 
 website:
   button_text: Github
