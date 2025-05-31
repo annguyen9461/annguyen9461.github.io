@@ -55,7 +55,7 @@ content_layout:
     content: |
       ## HARDWARE COMPONENTS
 
-      - Allegro Robotic Hand
+      - Allegro Hand V4
       - CAN interface and controller
-      
+
 ---
