@@ -16,7 +16,7 @@ website:
   url: https://github.com/rdlynx19/clash-of-hands
       
 intro: |
-  We made the Allegro Hand play rock-paper-scissors using strategies like a decision tree classifier and a Markov model, allowing the AI to improve over time by learning from previous games.
+  We programmed the Allegro Hand to play rock-paper-scissors using machine learning strategies that help it get smarter with every game.
 
   **Team Member:** Pushkar Dave
 content_layout:
