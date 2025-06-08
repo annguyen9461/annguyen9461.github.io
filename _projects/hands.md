@@ -42,7 +42,7 @@ content_layout:
     content: |
       ## AI AGENTS
 
-      **Markov Model**
+      **Markov Transition Matrix**
       - Tracks transition probabilities between player moves.
       - Predicts the next move based on the last move's transition matrix.
 
