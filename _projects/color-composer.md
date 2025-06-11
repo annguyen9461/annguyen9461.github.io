@@ -1,5 +1,5 @@
 ---
-date: 2024-12-11
+date: 2024-09-27
 published: true
 title: "Color Composer"
 description: "C, Embedded Systems, Microcontroller"

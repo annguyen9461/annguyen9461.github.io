@@ -1,5 +1,5 @@
 ---
-date: 2024-03-14
+date: 2024-12-11
 published: true
 title: "Clash of Hands"
 description: "C++, Python, Computer Vision"
