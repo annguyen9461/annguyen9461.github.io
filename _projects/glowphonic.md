@@ -79,7 +79,7 @@ content_layout:
       - [NeoPixel LED Guide](https://learn.adafruit.com/adafruit-neopixel-uberguide/basic-connections)
       - [Ultrasonic Sensor Tutorial](https://www.instructables.com/Simple-Arduino-and-HC-SR04-Example/)
       - [MPR121 Capacitive Touch Sensor Guide](https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial)
-      - [Music Samples] https://samplefocus.com/
+      - [Music Samples](https://samplefocus.com/)
 
   - section_layout: text
     content: |
