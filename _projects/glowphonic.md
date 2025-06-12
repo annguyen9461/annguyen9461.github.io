@@ -22,7 +22,7 @@ website:
   url: https://github.com/annguyen9461/glowphonic/
   
 intro: |
-  Glowphonic is an interactive digital musical instrument with touch-sensitive petals for playing notes and a 6-DOF IMU that modulates tremolo. It features responsive lighting that blinks to touch or audio amplitude, with sensor data sent to Max/MSP and synchronized visuals controlled by an ESP32.
+  *Glowphonic* is an interactive digital musical instrument with touch-sensitive petals for playing notes and a 6-DOF IMU that modulates tremolo. It features responsive lighting that blinks to touch or audio amplitude, with sensor data sent to Max/MSP and synchronized visuals controlled by an ESP32.
 
 content_layout:
   - section_layout: text  
@@ -67,6 +67,32 @@ content_layout:
 
   - section_layout: text
     content: |
+      ## BUILD
+
+  - section_layout: 2col
+    images:
+    - caption: Interior
+      description: 'Interior'
+      url: '/projects/glowphonic/glow-interior1.png'
+      width:
+      height:
+    
+    - caption: Full Build
+      description: 'Full Build'
+      url: '/projects/glowphonic/glow-interior2.png'
+      width:
+      height:
+
+  - section_layout: 1col
+    images:
+    - caption: Glowing
+      description: 'Interior'
+      url: '/projects/glowphonic/glow-build1.png'
+      width:
+      height:
+
+  - section_layout: text
+    content: |
       ## INSPIRATION
 
       *Glowphonic* was inspired by Jonathan Sparks’ <a href="https://jonathansparks.com/nomis/" target="blank">*Nomis*</a>, winner of the 2015 Guthman People's Choice Award, which produced melodies and layered glowing loops via gesture and light.
@@ -91,6 +117,7 @@ content_layout:
       - [Adafruit 12-Key Capacitive Touch Sensor Breakout](https://www.adafruit.com/product/1982)
       - [Adafruit ISM330DHCX 6-DOF IMU](https://www.adafruit.com/product/4502)
       - [Slide Potentiometer](https://www.adafruit.com/product/5295)
+      - [Adafruit NeoPixel Digital RGB LED Strip](https://www.adafruit.com/product/1138)
       - [Cherry Blossom Lampshade](https://www.amazon.com/dp/B07MRL3FK2)
 
       **Other materials**:
