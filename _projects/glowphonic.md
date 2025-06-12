@@ -65,6 +65,12 @@ content_layout:
         description: 'LED control circuit'
         url: '/projects/glowphonic/music-circuit2.png'
 
+  - section_layout: 1col
+    images:
+      - caption: Max Code Annotations
+        description: 'Max Code Annotations'
+        url: '/projects/glowphonic/max-code-annotations.png'
+
   - section_layout: text
     content: |
       ## BUILD
