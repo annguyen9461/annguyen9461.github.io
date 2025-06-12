@@ -125,6 +125,5 @@ content_layout:
       - 5V 5A AC to DC Power Supply for LEDs
       - Copper Conductive Tape
       - Jumper Wires (50cm)
-      - Hot Glue
 
 ---
