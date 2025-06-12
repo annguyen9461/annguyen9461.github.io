@@ -37,6 +37,14 @@ content_layout:
       - **AI Agents:** Markov Model, Decision Tree
       - **Robotic Hand Integration:** Controls an Allegro robotic hand via CAN bus to perform AI moves.
       - **Game History Tracking:** Logs game data for ongoing learning and behavior prediction.
+
+  - section_layout: 1col
+    images:
+      - caption: Block Diagram of the Interactions Between Subsystems
+        description: 'block diagram'
+        url: '/projects/hand/hands-block-diagram.png'
+        width:
+        height:
   
   - section_layout: text
     content: |

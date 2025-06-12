@@ -45,7 +45,7 @@ content_layout:
   - section_layout: 1col
     images:
       - caption: Block Diagram of the Interactions Between Subsystems
-        description: 'quad block diagram'
+        description: 'block diagram'
         url: '/projects/color-composer/color-composer-diagram.png'
         width:
         height:
@@ -109,7 +109,7 @@ content_layout:
   - section_layout: 1col
     images:
       - caption: Hardware
-        description: 'quad block diagram'
+        description: 'hardware'
         url: '/projects/color-composer/color-composer-components.png'
         width:
         height:
