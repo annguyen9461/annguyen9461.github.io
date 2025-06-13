@@ -101,7 +101,7 @@ content_layout:
     content: |
       ## INSPIRATION
 
-      *Glowphonic* was inspired by Jonathan Sparks’ <a href="https://jonathansparks.com/nomis/" target="blank">*Nomis*</a>, winner of the 2015 Guthman People's Choice Award, which produced melodies and layered glowing loops via gesture and light.
+      *Glowphonic* was inspired by Jonathan Sparks’ <a href="https://jonathansparks.com/nomis/" target="blank">*NOMIS*</a>, winner of the 2015 Guthman People's Choice Award, which produced melodies and layered glowing loops via gesture and light.
 
   - section_layout: text
     content: |
