@@ -145,12 +145,12 @@ content_layout:
 
   - section_layout: text
     content: |
-      I developed the image processing node using the Intel RealSense camera to detect the 3D positions of pool balls. These positions were used to guide the robot in planning strike trajectories.
+      The image processing node was developed using an Intel RealSense camera to detect the 3D positions of pool balls, providing positional data to guide the robot in planning strike trajectories.
 
-      The image pipeline focused on detecting red (cue ball) and blue (target balls) using **HSV-based color segmentation**. I filtered contours based on size to remove noise and computed the center of mass to extract x and y positions.
+      The image pipeline targeted detection of red (cue ball) and blue (target balls) through HSV-based color segmentation. Contours were filtered by size to remove noise, and the center of mass was computed to determine the x and y positions of each ball.
 
-      For depth (z), I used the depth stream from the RealSense camera and converted pixel coordinates into real-world metric positions using intrinsic parameters from the `camera_info` topic.
+      Depth (z) information was obtained from the RealSense depth stream, with pixel coordinates converted into real-world metric positions using intrinsic parameters from the **camera_info** topic.
 
-      I then broadcasted each ball’s position as a **TF frame** relative to the robot's base frame, enabling the control nodes to access their live positions.
+      Each ball’s position was broadcast as a TF frame relative to the robot’s base frame, enabling control nodes to access and update their live positions during operation.
 
 ---
