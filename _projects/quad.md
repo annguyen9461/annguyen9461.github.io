@@ -35,7 +35,7 @@ content_layout:
 
       The research paper [Scorpio: A biomimetic reconfigurable rolling-crawling robot](https://www.researchgate.net/publication/309273470_Scorpio_A_biomimetic_reconfigurable_rolling-crawling_robot) inspired the design of my robot, which I fully modeled in OnShape.
       
-      I chose DYNAMIXEL motors for their high torque output and well-documented ROS2 integration. For the microcontroller, I used the Raspberry Pi 5, which supports Ubuntu and runs ROS2 efficiently.
+      I chose DYNAMIXEL motors for their high torque output and well-documented ROS2 integration. For the controller, I used the Raspberry Pi 5, which supports Ubuntu and runs ROS2 efficiently.
 
   - section_layout: 2col
     images:
