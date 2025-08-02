@@ -2,9 +2,9 @@
 date: 2025-03-14
 published: true
 title: "Self-Reconfigurable Quadruped from Scratch"
-description: "C++, Python, ROS2, YOLO, CAD"
+description: "C++, Python, ROS2, YOLO, CAD (Onshape)"
 categories: branding, digital
-technologies: C++, Python, ROS2, YOLO, CAD
+technologies: C++, Python, ROS2, YOLO, CAD (Onshape)
 media: Book
 ownership: Personal
 client:
