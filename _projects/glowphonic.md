@@ -43,9 +43,9 @@ content_layout:
       - **12-Key Capacitive Touch Sensor**: Plays notes from two keyboards via Max/MSP.
       - **6-DOF IMU**: Tilting forward (x-axis) increases the tremolo of an audio sample.
       - **Slide Potentiometer**: Controls keyboard volume.
-      - **Ultrasonic Distance Sensor**: Controls sample loop speed—closer distances loop faster.
+      - **Ultrasonic Distance Sensor**: Controls sample loop speed. Closer distances loop faster.
 
-      Sensor readings are collected by an Arduino Nano and sent to Max/MSP over serial USB. Max interprets this data and sends visual triggers—such as note activations or amplitude spikes—via a second serial connection to an ESP32-S3. The ESP32-S3 controls a NeoPixel LED strip, blinking in response to these events to create synchronized light feedback.
+      Sensor readings are collected by an Arduino Nano and sent to Max/MSP over serial USB. Max interprets this data and sends visual triggers, such as note activations or amplitude spikes, via a second serial connection to an ESP32-S3. The ESP32-S3 controls a NeoPixel LED strip, blinking in response to these events to create synchronized light feedback.
 
   - section_layout: text
     content: |
