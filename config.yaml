@@ -393,48 +393,48 @@ params:
         #   - icon: fab fa-github
             # url: https://github.com/annguyen9461/
 
-      # - title: Glowphonic
-      #   content: An interactive musical instrument with touch petals, IMU-based tremolo, and reactive lighting synchronized via ESP32 and Max/MSP
-      #   image: /images/projects/glowphonic/glow2.gif
-      #   featured:
-      #     name: Read More
-      #     link: /glowphonic
-      #   badges:
-      #     - "C++"
-      #     - "Arduino"
-      #     - "Max/MSP"
-      #     - "Digital Music"
-      #   links:
-      #     - icon: fab fa-github
-      #       url: https://github.com/annguyen9461/glowphonic/
+      - title: Glowphonic
+        content: An interactive musical instrument with touch petals, IMU-based tremolo, and reactive lighting synchronized via ESP32 and Max/MSP
+        image: /images/projects/glowphonic/glow.gif
+        featured:
+          name: Read More
+          link: /glowphonic
+        badges:
+          - "C++"
+          - "Arduino"
+          - "Max/MSP"
+          - "Digital Music"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/annguyen9461/glowphonic/
 
-      # - title: Poetic Lens
-      #   content: An AI pipeline that transforms photographs into poetry using computer vision and text generation
-      #   image: /images/projects/poetic-lens/poem-cat.gif
-      #   featured:
-      #     name: Read More
-      #     link: /poetic-lens
-      #   badges:
-      #     - "Python"
-      #     - "PyTorch"
-      #     - "Computer Vision"
-      #     - "Generative AI"
-      #     - "BLIP"
-      #     - "GPT-2"
-      #   links:
-      #     - icon: fab fa-github
-      #       url: https://github.com/annguyen9461/poetic-lens
+      - title: Poetic Lens
+        content: An AI pipeline that transforms photographs into poetry using computer vision and text generation
+        image: /images/projects/poetic-lens/poem-cat.gif
+        featured:
+          name: Read More
+          link: /poetic-lens
+        badges:
+          - "Python"
+          - "PyTorch"
+          - "Computer Vision"
+          - "Generative AI"
+          - "BLIP"
+          - "GPT-2"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/annguyen9461/poetic-lens
 
-      # - title: Swarm Construction
-      #   content: Autonomous bridge construction using a swarm of quadrotors (In Progress)
-      #   image: /images/projects/construction/drone-carry-drox.gif
-      #   featured:
-      #     name: Read More
-      #     link:
-      #   badges:
-      #     - "Python"
-      #     - "CAD"
-      #     - "OptiTrack"
+      - title: Swarm Construction
+        content: Autonomous bridge construction using a swarm of quadrotors (In Progress)
+        image: /images/projects/construction/drone-carry-drox.gif
+        featured:
+          name: Read More
+          link:
+        badges:
+          - "Python"
+          - "CAD"
+          - "OptiTrack"
         # links:
         #   - icon: fab fa-github
         #     url: 
