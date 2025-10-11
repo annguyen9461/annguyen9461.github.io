@@ -395,7 +395,7 @@ params:
 
       - title: Glowphonic
         content: An interactive musical instrument with touch petals, IMU-based tremolo, and reactive lighting synchronized via ESP32 and Max/MSP
-        image: /images/projects/glowphonic/glow.gif
+        image: /images/projects/glowphonic/glow2.gif
         featured:
           name: Read More
           link: /glowphonic
