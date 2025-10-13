@@ -430,7 +430,7 @@ params:
         image: /images/projects/construction/drone-carry-drox.gif
         featured:
           name: Read More
-          link:
+          link: /swarm-construction
         badges:
           - "Python"
           - "CAD"
