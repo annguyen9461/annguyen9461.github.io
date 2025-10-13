@@ -1,6 +1,6 @@
 baseURL: "https://annguyen9461.github.io/"
 languageCode: "en-us"
-title: "An's Portfolio"
+title: "Portfolio"
 theme: hugo-profile
 
 outputs:
@@ -59,7 +59,7 @@ Menus:
     #   weight: 2
 
 params:
-  title: "An's Portfolio"
+  title: "Portfolio"
   description: MS Robotics @ Northwestern
   # staticPath: ""  # The path to serve the static files from
   favicon: "/headshot-modified.png"
