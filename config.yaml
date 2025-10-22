@@ -104,10 +104,10 @@ params:
     darkmode:
       textColor: "#212529"
       secondaryTextColor: "#B27092"
-      textLinkColor: "#519e8a"
+      textLinkColor: "#218380"
       backgroundColor: "#F0F7EE"
       secondaryBackgroundColor: "#212529"
-      primaryColor: "#519e8a "
+      primaryColor: "#218380"
       secondaryColor: "#C4D7F2"
 
   # If you want to customize the menu, you can change it here
