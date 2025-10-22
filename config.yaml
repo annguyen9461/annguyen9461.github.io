@@ -358,7 +358,7 @@ params:
           link: /kuka
         badges:
           - "Python"
-          - "Trajectory Planning,"
+          - "Trajectory Planning"
           - "Manipulation"
           - "Feedforward Control"
         # links:
