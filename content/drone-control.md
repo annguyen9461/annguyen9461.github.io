@@ -49,6 +49,8 @@ The third design uses two magnets, one embedded on top of the droxel and the oth
 </div>
 <br>
 
+The final design makes use of a cone for easier picking.
+
 ---
 ## SwarmOS
 
