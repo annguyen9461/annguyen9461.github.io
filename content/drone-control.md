@@ -50,6 +50,14 @@ The third design uses two magnets, one embedded on top of the droxel and the oth
 <br>
 
 ---
+## SwarmOS
+
+<div style="display: flex;">
+    <img src="/images/projects/construction/swarmOS.png" alt="gripperv3" style="width: 100%; height: auto;"/>
+</div>
+<br>
+
+---
 ## Cascaded PID Control
 
 - Inner Loop (Velocity) reacts instantly to physical disturbances (like wind or motor changes) before they can affect the position.
