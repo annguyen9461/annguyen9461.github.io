@@ -101,7 +101,7 @@ The third design uses two magnets, one embedded on top of the droxel and the oth
 
 ---
 ## Next Steps
-Conduct flight tests with a multile drones.
+Conduct flight tests with multile drones.
 
 <div style="display: flex;">
     <img src="/images/projects/construction/6drones_hover.gif" alt="gripperv3" style="width: 100%; height: auto;"/>
