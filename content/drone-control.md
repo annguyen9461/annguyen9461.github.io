@@ -49,8 +49,6 @@ The third design uses two magnets, one embedded on top of the droxel and the oth
 </div>
 <br>
 
-The final design makes use of a cone for easier picking.
-
 ---
 ## SwarmOS
 
@@ -83,7 +81,7 @@ The final design makes use of a cone for easier picking.
 
 #### Tracking y
 <div style="display: flex;">
-    <img src="/images/projects/construction/trackingy.png" alt="gripperv4" style="width: 100%; height: auto;"/>
+    <img src="/images/projects/construction/trackingy.png" alt="gripperv3" style="width: 100%; height: auto;"/>
 </div>
 <br>
 
@@ -96,11 +94,6 @@ The final design makes use of a cone for easier picking.
 
 ---
 ## Painting
-<div style="display: flex; justify-content: center;">
-    <img src="/images/projects/construction/star.png" alt="star" style="width: 20%; height: auto;"/>
-</div>
-<br>
-
 <video controls autoplay loop muted playsinline width="100%">
   <source src="/videos/drone/spedup_star.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -111,7 +104,7 @@ The final design makes use of a cone for easier picking.
 Conduct flight tests with multile drones.
 
 <div style="display: flex;">
-    <img src="/images/projects/construction/6drones_hover.gif" alt="multidrone" style="width: 100%; height: auto;"/>
+    <img src="/images/projects/construction/6drones_hover.gif" alt="gripperv3" style="width: 100%; height: auto;"/>
 </div>
 <br>
 

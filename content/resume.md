@@ -9,5 +9,5 @@ toc: false
 mathjax: true
 socialShare: false
 ---
-<iframe src="/resume_nonum.pdf" width="100%" height="600px"></iframe>
+<iframe src="/AnNguyen_Resume102025.pdf" width="100%" height="600px"></iframe>
 
