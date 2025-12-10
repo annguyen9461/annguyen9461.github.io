@@ -425,12 +425,12 @@ params:
           - icon: fab fa-github
             url: https://github.com/annguyen9461/poetic-lens
 
-      - title: Swarm Construction
-        content: Autonomous bridge construction using a swarm of quadrotors (In Progress)
+      - title: Drone Control
+        content: Multi-agent control system enables drones to perform different tasks (In Progress)
         image: /images/projects/construction/drone-carry-drox.gif
         featured:
           name: Read More
-          link: /swarm-construction
+          link: /drone-control
         badges:
           - "Python"
           - "CAD"
